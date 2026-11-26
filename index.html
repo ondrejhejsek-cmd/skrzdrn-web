@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motorkáři pod Strážníkem | SkrzDrn Kundratice</title>
-    <meta name="description" content="Oficiální web party Motorkáři pod Strážníkem – SkrzDrn Kundratice. Závody Fichtlů, enduro, daleké výlety, garáž a příběhy z depa.">
+    <title>Motorkáři pod Strážníkem | SKRZ DRN Kundratice</title>
+    <meta name="description" content="Oficiální web party Motorkáři pod Strážníkem – SKRZ DRN Kundratice. Závody Fichtlů, enduro, daleké výlety, garáž a příběhy z depa.">
+    <link rel="icon" type="image/png" href="img/logo-straznik.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +17,11 @@
     <header class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <span class="logo-tag">SKRZDRN</span>
-                <span class="logo-sub">POD STRÁŽNÍKEM</span>
+                <img src="img/logo-skrzdrn.png" alt="SKRZ DRN" class="nav-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="logo-fallback" style="display: none;">
+                    <span class="logo-tag">SKRZ <span class="red">DRN</span></span>
+                    <span class="logo-sub">MOTORKÁŘI POD STRÁŽNÍKEM</span>
+                </div>
             </a>
             <button class="menu-toggle" id="menuToggle" aria-label="Otevřít menu">☰</button>
             <nav class="nav-links" id="navLinks">
@@ -32,19 +36,32 @@
         </div>
     </header>
 
-    <!-- Úvodní sekce (Hero) -->
+    <!-- Úvodní sekce (Hero) s hlavním logem Motorkáři pod Strážníkem -->
     <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <span class="badge">KUNDRATICE • PODKRKONOŠÍ • OD ROKU 2020</span>
-            <h1>MOTORKÁŘI POD STRÁŽNÍKEM<br><span class="accent">SKRZDRN KUNDRATICE</span></h1>
-            <p class="hero-lead">
-                Jedna parta, dvě vášně. Zatímco jedni hltají tisíce kilometrů po Evropě na cestovních endurech, 
-                mladí kluci ždímají dvoutakty na doraz na 24hodinovkách a lokálních tratích.
-            </p>
-            <div class="hero-buttons">
-                <a href="#aktivity" class="btn btn-primary" onclick="switchTab('zavody')">Závodní sekce</a>
-                <a href="#aktivity" class="btn btn-secondary" onclick="switchTab('cesty')">Cestovatelé & Trasy</a>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="badge">KUNDRATICE • PODKRKONOŠÍ • ČERNÁ • BÍLÁ • ČERVENÁ</span>
+                <h1>MOTORKÁŘI POD STRÁŽNÍKEM<br><span class="accent">SKRZ DRN KUNDRATICE</span></h1>
+                <p class="hero-lead">
+                    Jedna parta, dvě vášně. Zatímco jedni hltají tisíce kilometrů po Evropě na cestovních endurech, 
+                    mladí kluci ždímají dvoutakty na doraz na 24hodinovkách a lokálních tratích.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#aktivity" class="btn btn-primary" onclick="switchTab('zavody')">Závodní sekce</a>
+                    <a href="#aktivity" class="btn btn-secondary" onclick="switchTab('cesty')">Cestovatelé & Trasy</a>
+                </div>
+            </div>
+
+            <!-- Hlavní logo z PDF (strana 2) -->
+            <div class="hero-logo-box">
+                <img src="img/logo-straznik.png" alt="Motorkáři pod Strážníkem" class="hero-emblem" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <!-- Vektorová záloha znaku Strážník, dokud se nenahraje PNG -->
+                <svg class="hero-emblem-svg" style="display: none;" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 135 Q95 100 180 65 Q265 100 340 135" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+                    <text x="180" y="138" text-anchor="middle" fill="#ffffff" font-family="'Chakra Petch', sans-serif" font-weight="700" font-size="30" letter-spacing="1.5">MOTORKÁŘI</text>
+                    <text x="180" y="168" text-anchor="middle" fill="#d91e2a" font-family="'Chakra Petch', sans-serif" font-weight="700" font-size="26" letter-spacing="2">POD</text>
+                    <text x="180" y="198" text-anchor="middle" fill="#ffffff" font-family="'Chakra Petch', sans-serif" font-weight="700" font-size="28" letter-spacing="1.5">STRÁŽNÍKEM</text>
+                </svg>
             </div>
         </div>
     </section>
@@ -176,8 +193,14 @@
     <section id="aktivity" class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Živý obsah ze sezóny</h2>
-                <p>Vyber si, jestli tě víc zajímá vůně spáleného dvoutaktu v depu, nebo plánování tras.</p>
+                <div class="section-header-flex">
+                    <div>
+                        <h2>Živý obsah ze sezóny</h2>
+                        <p>Vyber si, jestli tě víc zajímá vůně spáleného dvoutaktu v depu, nebo plánování tras.</p>
+                    </div>
+                    <!-- Oválné závodní logo z PDF (strana 3) -->
+                    <img src="img/logo-oval.png" alt="SKRZ DRN Závodní divize" class="section-badge-logo" onerror="this.style.display='none';">
+                </div>
                 
                 <div class="tabs-nav">
                     <button class="tab-btn active" id="tab-btn-zavody" onclick="switchTab('zavody')">🔧 Závodní tým (Depo & Garáž)</button>
@@ -309,7 +332,7 @@
 
             <div class="grid-3">
                 <div class="gallery-card">
-                    <div class="gallery-thumb" style="background: linear-gradient(135deg, #2b1055, #121212);">
+                    <div class="gallery-thumb" style="background: linear-gradient(135deg, #4a080c, #0f0f11);">
                         <span>📸 ZÁVODY & ENDURO</span>
                     </div>
                     <div class="gallery-body">
@@ -320,7 +343,7 @@
                 </div>
 
                 <div class="gallery-card">
-                    <div class="gallery-thumb" style="background: linear-gradient(135deg, #4a148c, #1a1a1a);">
+                    <div class="gallery-thumb" style="background: linear-gradient(135deg, #27272a, #09090b);">
                         <span>🔧 GARÁŽ & STAVBA</span>
                     </div>
                     <div class="gallery-body">
@@ -331,7 +354,7 @@
                 </div>
 
                 <div class="gallery-card">
-                    <div class="gallery-thumb" style="background: linear-gradient(135deg, #6a1b9a, #181818);">
+                    <div class="gallery-thumb" style="background: linear-gradient(135deg, #7f1d1d, #111113);">
                         <span>🏍️ VYJÍŽĎKY PARTA</span>
                     </div>
                     <div class="gallery-body">
@@ -395,83 +418,4 @@
 
                     <div class="checklist-group">
                         <h4>Nářadí a depo</h4>
-                        <label><input type="checkbox" data-item="gola"> Gola sada, klíče 8–19, šroubováky, kleště</label>
-                        <label><input type="checkbox" data-item="pasky"> Stahovací pásky (různé délky) + americká páska</label>
-                        <label><input type="checkbox" data-item="svetlo"> Čelovka + náhradní baterky (pro 24h závody)</label>
-                    </div>
-
-                    <div class="checklist-group">
-                        <h4>Jezdec a kempování</h4>
-                        <label><input type="checkbox" data-item="vystroj"> Helma, brýle, rukavice, boty, chrániče</label>
-                        <label><input type="checkbox" data-item="stan"> Stan, spacák, karimatka / lehátko a pitný režim</label>
-                    </div>
-
-                    <button class="btn-link no-print" onclick="resetChecklist()">Vymazat zaškrtnutí</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. PARTNEŘI A SPONZOŘI -->
-    <section id="partneri" class="section section-dark">
-        <div class="container">
-            <div class="section-header">
-                <h2>Partneři a podpora</h2>
-                <p>Děkujeme všem kamarádům, dílnám a firmám, které nám pomáhají s materiálem, díly nebo dopravou.</p>
-            </div>
-
-            <div class="partners-grid">
-                <div class="partner-box">Dílna & Garáž Kundratice</div>
-                <div class="partner-box">Místní podporovatelé</div>
-                <div class="partner-box">TVOJE LOGO ZDE</div>
-            </div>
-
-            <div class="sponsor-cta">
-                <h3>Chcete podpořit náš tým nebo závodní speciály?</h3>
-                <p>Rádi umístíme vaše logo na naše závodní stroje, týmové dresy i sem na web.</p>
-                <a href="#kontakt" class="btn btn-primary">Napsat nám ohledně spolupráce</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 1. KONTAKT A SOCIÁLNÍ SÍTĚ -->
-    <footer id="kontakt" class="footer">
-        <div class="container footer-grid">
-            <div>
-                <a href="#" class="logo">
-                    <span class="logo-tag">SKRZDRN</span>
-                    <span class="logo-sub">POD STRÁŽNÍKEM</span>
-                </a>
-                <p class="footer-desc">
-                    Parta motorkářů z Kundratic a okolí. Závody Fichtlů, enduro, daleké cesty a poctivá garážová práce.
-                </p>
-            </div>
-
-            <div>
-                <h4>Rychlé odkazy</h4>
-                <ul class="footer-links">
-                    <li><a href="#kalendar">Kalendář sezóny</a></li>
-                    <li><a href="#jezdci">Jezdci a stroje</a></li>
-                    <li><a href="#aktivity">Z deníku depa & Trasy</a></li>
-                    <li><a href="#oziveni">Závodní checklist</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4>Kontakt & Galerie</h4>
-                <ul class="footer-links">
-                    <li>📍 Kundratice (Košťálov), Podkrkonoší</li>
-                    <li>🌐 Web: <a href="https://skrzdrn.eu">skrzdrn.eu</a></li>
-                    <li>📸 Fotky: <a href="https://ondra130.rajce.idnes.cz/" target="_blank" rel="noopener">Rajče.net (ondra130)</a></li>
-                    <li>✉️ E-mail: <a href="mailto:info@skrzdrn.eu">info@skrzdrn.eu</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 Motorkáři pod Strážníkem – SkrzDrn Kundratice. Všechna práva vyhrazena.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                        <label><input type="checkbox" data-item="gola"> Gola sada, klíče 8–
