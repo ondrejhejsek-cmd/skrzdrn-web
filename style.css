@@ -1,14 +1,14 @@
 :root {
-    --bg-main: #0e0e11;
-    --bg-secondary: #16161c;
-    --bg-card: #1e1e26;
-    --border-color: #2e2e3a;
-    --text-main: #f3f4f6;
-    --text-muted: #9ca3af;
-    --purple: #8b5cf6;
-    --purple-dark: #6d28d9;
-    --orange: #f97316;
-    --radius: 12px;
+    --bg-main: #0b0b0c;
+    --bg-secondary: #131316;
+    --bg-card: #1a1a1f;
+    --border-color: #2c2c34;
+    --text-main: #ffffff;
+    --text-muted: #a1a1aa;
+    --red: #d91e2a;
+    --red-dark: #b0151f;
+    --white: #ffffff;
+    --radius: 10px;
 }
 
 * {
@@ -31,7 +31,11 @@ body {
 h1, h2, h3, h4, .logo-tag {
     font-family: 'Chakra Petch', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
+}
+
+.red {
+    color: var(--red);
 }
 
 .container {
@@ -45,16 +49,16 @@ h1, h2, h3, h4, .logo-tag {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(14, 14, 17, 0.92);
+    background: rgba(11, 11, 12, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 2px solid var(--red);
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0.85rem 0;
 }
 
 .logo {
@@ -64,17 +68,31 @@ h1, h2, h3, h4, .logo-tag {
     line-height: 1.1;
 }
 
+.nav-logo-img {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+    background: var(--white);
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.logo-fallback {
+    flex-direction: column;
+}
+
 .logo-tag {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 700;
-    color: var(--text-main);
+    font-style: italic;
+    color: var(--white);
 }
 
 .logo-sub {
     font-size: 0.72rem;
     font-weight: 700;
-    color: var(--purple);
-    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    letter-spacing: 1.4px;
 }
 
 .nav-links {
@@ -87,26 +105,30 @@ h1, h2, h3, h4, .logo-tag {
     color: var(--text-muted);
     text-decoration: none;
     font-size: 0.92rem;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.2s;
 }
 
 .nav-links a:hover {
-    color: var(--text-main);
+    color: var(--white);
 }
 
 .btn-nav {
-    background: var(--purple);
-    color: #fff !important;
+    background: var(--red);
+    color: var(--white) !important;
     padding: 0.45rem 1rem;
     border-radius: 6px;
+}
+
+.btn-nav:hover {
+    background: var(--red-dark);
 }
 
 .menu-toggle {
     display: none;
     background: none;
     border: 1px solid var(--border-color);
-    color: var(--text-main);
+    color: var(--white);
     font-size: 1.4rem;
     padding: 0.25rem 0.6rem;
     border-radius: 6px;
@@ -116,37 +138,45 @@ h1, h2, h3, h4, .logo-tag {
 /* Hero sekce */
 .hero {
     position: relative;
-    padding: 6rem 0 5rem;
-    background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.22), transparent 55%),
-                linear-gradient(180deg, #15151d 0%, var(--bg-main) 100%);
+    padding: 5.5rem 0 4.5rem;
+    background: radial-gradient(circle at top right, rgba(217, 30, 42, 0.22), transparent 55%),
+                linear-gradient(180deg, #141418 0%, var(--bg-main) 100%);
     border-bottom: 1px solid var(--border-color);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 2.5rem;
+    align-items: center;
 }
 
 .badge {
     display: inline-block;
-    background: rgba(139, 92, 246, 0.15);
-    border: 1px solid rgba(139, 92, 246, 0.4);
-    color: #c4b5fd;
+    background: rgba(217, 30, 42, 0.15);
+    border: 1px solid rgba(217, 30, 42, 0.5);
+    color: #fca5a5;
     font-size: 0.78rem;
     font-weight: 700;
-    padding: 0.35rem 0.8rem;
+    padding: 0.35rem 0.85rem;
     border-radius: 999px;
     margin-bottom: 1.2rem;
 }
 
 .hero h1 {
-    font-size: clamp(2.1rem, 5vw, 3.6rem);
+    font-size: clamp(2.1rem, 4.5vw, 3.4rem);
     line-height: 1.12;
     margin-bottom: 1.2rem;
+    color: var(--white);
 }
 
 .hero h1 .accent {
-    color: var(--purple);
+    color: var(--red);
 }
 
 .hero-lead {
-    max-width: 680px;
-    font-size: 1.1rem;
+    max-width: 650px;
+    font-size: 1.08rem;
     color: var(--text-muted);
     margin-bottom: 2rem;
 }
@@ -157,12 +187,38 @@ h1, h2, h3, h4, .logo-tag {
     gap: 1rem;
 }
 
+.hero-logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    border: 3px solid var(--red);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.hero-emblem {
+    max-width: 100%;
+    max-height: 230px;
+    height: auto;
+    display: block;
+}
+
+.hero-emblem-svg {
+    width: 100%;
+    max-width: 320px;
+    background: var(--bg-main);
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
 /* Tlačítka */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.4rem;
     border-radius: 8px;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     cursor: pointer;
     border: none;
@@ -171,32 +227,31 @@ h1, h2, h3, h4, .logo-tag {
 }
 
 .btn-primary {
-    background: var(--purple);
-    color: #fff;
+    background: var(--red);
+    color: var(--white);
 }
 
 .btn-primary:hover {
-    background: var(--purple-dark);
+    background: var(--red-dark);
 }
 
 .btn-secondary {
-    background: var(--bg-card);
-    color: var(--text-main);
-    border: 1px solid var(--border-color);
+    background: var(--white);
+    color: var(--bg-main);
 }
 
 .btn-secondary:hover {
-    border-color: var(--purple);
+    background: #e4e4e7;
 }
 
 .btn-outline {
     background: transparent;
-    color: var(--text-main);
-    border: 1px solid var(--purple);
+    color: var(--white);
+    border: 1px solid var(--red);
 }
 
 .btn-outline:hover {
-    background: rgba(139, 92, 246, 0.15);
+    background: rgba(217, 30, 42, 0.18);
 }
 
 .btn-sm {
@@ -229,9 +284,34 @@ h1, h2, h3, h4, .logo-tag {
     margin-bottom: 2.5rem;
 }
 
+.section-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.section-badge-logo {
+    height: 85px;
+    width: auto;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+}
+
 .section-header h2 {
     font-size: 2rem;
     margin-bottom: 0.4rem;
+    color: var(--white);
+}
+
+.section-header h2::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--red);
+    margin-top: 0.4rem;
 }
 
 .section-header p {
@@ -258,10 +338,10 @@ h1, h2, h3, h4, .logo-tag {
 }
 
 .race-table th {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.04);
     font-size: 0.85rem;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: var(--white);
 }
 
 .race-table tr:last-child td {
@@ -269,13 +349,14 @@ h1, h2, h3, h4, .logo-tag {
 }
 
 .table-link {
-    color: var(--purple);
+    color: var(--red);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .table-link:hover {
     text-decoration: underline;
+    color: #f87171;
 }
 
 /* Štítky (Tags) */
@@ -288,15 +369,13 @@ h1, h2, h3, h4, .logo-tag {
 }
 
 .tag-race {
-    background: rgba(249, 115, 22, 0.15);
-    color: var(--orange);
-    border: 1px solid rgba(249, 115, 22, 0.35);
+    background: var(--red);
+    color: var(--white);
 }
 
 .tag-trip {
-    background: rgba(139, 92, 246, 0.15);
-    color: #c4b5fd;
-    border: 1px solid rgba(139, 92, 246, 0.35);
+    background: var(--white);
+    color: var(--bg-main);
 }
 
 /* Mřížky a karty */
@@ -333,7 +412,7 @@ h1, h2, h3, h4, .logo-tag {
     display: inline-block;
     font-size: 0.75rem;
     font-weight: 700;
-    color: var(--purple);
+    color: var(--red);
     letter-spacing: 1px;
     margin-bottom: 0.5rem;
 }
@@ -341,6 +420,7 @@ h1, h2, h3, h4, .logo-tag {
 .card h3 {
     font-size: 1.3rem;
     margin-bottom: 0.6rem;
+    color: var(--white);
 }
 
 .meta {
@@ -364,13 +444,13 @@ h1, h2, h3, h4, .logo-tag {
     padding: 0.45rem 1rem;
     border-radius: 6px;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .filter-btn.active, .filter-btn:hover {
-    background: var(--purple);
-    color: #fff;
-    border-color: var(--purple);
+    background: var(--red);
+    color: var(--white);
+    border-color: var(--red);
 }
 
 .card-top {
@@ -382,13 +462,13 @@ h1, h2, h3, h4, .logo-tag {
 
 .race-number {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: var(--orange);
+    color: var(--red);
 }
 
 .bike-model {
-    color: #e5e7eb;
+    color: var(--white);
     margin-bottom: 0.8rem;
 }
 
@@ -404,10 +484,10 @@ h1, h2, h3, h4, .logo-tag {
 }
 
 .rider-quote, .quote-box {
-    border-left: 3px solid var(--purple);
+    border-left: 3px solid var(--red);
     padding-left: 0.9rem;
     font-style: italic;
-    color: #d1d5db;
+    color: #e4e4e7;
     margin: 1rem 0;
 }
 
@@ -426,15 +506,15 @@ h1, h2, h3, h4, .logo-tag {
     padding: 0.8rem 1.4rem;
     border-radius: 8px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.2s;
 }
 
 .tab-btn.active {
-    background: var(--purple);
-    color: #fff;
-    border-color: var(--purple);
+    background: var(--red);
+    color: var(--white);
+    border-color: var(--red);
 }
 
 .tab-content {
@@ -460,8 +540,8 @@ h1, h2, h3, h4, .logo-tag {
 
 .stat-row strong {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 1.3rem;
-    color: var(--orange);
+    font-size: 1.35rem;
+    color: var(--red);
 }
 
 .stat-row span {
@@ -470,10 +550,10 @@ h1, h2, h3, h4, .logo-tag {
 }
 
 .tip-box {
-    background: rgba(139, 92, 246, 0.1);
-    border: 1px solid rgba(139, 92, 246, 0.25);
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid var(--white);
     padding: 0.7rem;
-    border-radius: 8px;
+    border-radius: 4px;
     font-size: 0.9rem;
     margin: 1rem 0;
 }
@@ -494,7 +574,8 @@ h1, h2, h3, h4, .logo-tag {
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
-    border-bottom: 1px solid var(--border-color);
+    color: var(--white);
+    border-bottom: 2px solid var(--red);
 }
 
 .gallery-body {
@@ -509,7 +590,7 @@ h1, h2, h3, h4, .logo-tag {
 
 /* Checklist & Oživení */
 .trophy-card {
-    border-color: rgba(249, 115, 22, 0.4);
+    border-color: var(--red);
 }
 
 .checklist-header {
@@ -525,7 +606,7 @@ h1, h2, h3, h4, .logo-tag {
 
 .checklist-group h4 {
     font-size: 0.95rem;
-    color: var(--orange);
+    color: var(--red);
     margin-bottom: 0.5rem;
 }
 
@@ -539,7 +620,7 @@ h1, h2, h3, h4, .logo-tag {
 }
 
 .checklist-group input[type="checkbox"] {
-    accent-color: var(--purple);
+    accent-color: var(--red);
     width: 16px;
     height: 16px;
 }
@@ -560,12 +641,12 @@ h1, h2, h3, h4, .logo-tag {
     border-radius: var(--radius);
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 700;
-    color: var(--text-muted);
+    color: var(--white);
 }
 
 .sponsor-cta {
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.18), rgba(249, 115, 22, 0.1));
-    border: 1px solid rgba(139, 92, 246, 0.35);
+    background: linear-gradient(135deg, rgba(217, 30, 42, 0.2), rgba(255, 255, 255, 0.04));
+    border: 1px solid var(--red);
     padding: 2rem;
     border-radius: var(--radius);
     text-align: center;
@@ -578,8 +659,8 @@ h1, h2, h3, h4, .logo-tag {
 
 /* Patička */
 .footer {
-    background: #0a0a0d;
-    border-top: 1px solid var(--border-color);
+    background: #070708;
+    border-top: 2px solid var(--red);
     padding-top: 3.5rem;
 }
 
@@ -599,6 +680,7 @@ h1, h2, h3, h4, .logo-tag {
 .footer h4 {
     margin-bottom: 1rem;
     font-size: 1rem;
+    color: var(--white);
 }
 
 .footer-links {
@@ -617,7 +699,7 @@ h1, h2, h3, h4, .logo-tag {
 }
 
 .footer-links a:hover {
-    color: var(--purple);
+    color: var(--red);
 }
 
 .footer-bottom {
@@ -629,6 +711,15 @@ h1, h2, h3, h4, .logo-tag {
 }
 
 /* Responzivita & Tisk */
+@media (max-width: 850px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-logo-box {
+        max-width: 340px;
+    }
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -642,7 +733,7 @@ h1, h2, h3, h4, .logo-tag {
         right: 0;
         background: var(--bg-secondary);
         padding: 1.5rem;
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 2px solid var(--red);
     }
     .nav-links.open {
         display: flex;
