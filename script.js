@@ -64,6 +64,8 @@ const depotQuotes = [
     '„Neřeš spotřebu, řeš poměr oleje v benzínu, ať to nezadřeš před cílem!“',
     '„V dešti se nepozná výkon motoru, ale odvaha v první zatáčce.“',
     '„Kdo nelehne v blátě, jako by na enduru ani nebyl.“'
+    '„Kdo nepadá nezrychluje.“'
+    '„Kdo brzdí, nevyhrává.“'
 ];
 
 let currentQuoteIndex = 0;
