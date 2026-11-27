@@ -17,7 +17,7 @@
     <header class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <img src="img/logo-skrzdrn.png" alt="SKRZ DRN" class="nav-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="img/logo_skrzdrn.png" alt="SKRZ DRN" class="nav-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="logo-fallback" style="display: none;">
                     <span class="logo-tag">SKRZ <span class="red">DRN</span></span>
                     <span class="logo-sub">MOTORKÁŘI POD STRÁŽNÍKEM</span>
@@ -40,11 +40,11 @@
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <span class="badge">KUNDRATICE • PODKRKONOŠÍ • ČERNÁ • BÍLÁ • ČERVENÁ</span>
+                <span class="badge">• KUNDRATICE • PODKRKONOŠÍ •</span>
                 <h1>MOTORKÁŘI POD STRÁŽNÍKEM<br><span class="accent">SKRZ DRN KUNDRATICE</span></h1>
                 <p class="hero-lead">
-                    Jedna parta, dvě vášně. Zatímco jedni hltají tisíce kilometrů po Evropě na cestovních endurech, 
-                    mladí kluci ždímají dvoutakty na doraz na 24hodinovkách a lokálních tratích.
+                    Jedna parta, dvě vášně. Zatímco jedni hltají tisíce kilometrů nejen po Evropě na cestovních endurech, 
+                    mladí kluci ždímají dvoutakty různých kubatur na doraz na 24hodinovkách a motokrosových tratích.
                 </p>
                 <div class="hero-buttons">
                     <a href="#aktivity" class="btn btn-primary" onclick="switchTab('zavody')">Závodní sekce</a>
@@ -54,14 +54,8 @@
 
             <!-- Hlavní logo z PDF (strana 2) -->
             <div class="hero-logo-box">
-                <img src="img/logo-straznik.png" alt="Motorkáři pod Strážníkem" class="hero-emblem" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <!-- Vektorová záloha znaku Strážník, dokud se nenahraje PNG -->
-                <svg class="hero-emblem-svg" style="display: none;" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 135 Q95 100 180 65 Q265 100 340 135" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
-                    <text x="180" y="138" text-anchor="middle" fill="#ffffff" font-family="'Chakra Petch', sans-serif" font-weight="700" font-size="30" letter-spacing="1.5">MOTORKÁŘI</text>
-                    <text x="180" y="168" text-anchor="middle" fill="#d91e2a" font-family="'Chakra Petch', sans-serif" font-weight="700" font-size="26" letter-spacing="2">POD</text>
-                    <text x="180" y="198" text-anchor="middle" fill="#ffffff" font-family="'Chakra Petch', sans-serif" font-weight="700" font-size="28" letter-spacing="1.5">STRÁŽNÍKEM</text>
-                </svg>
+                <img src="img/vlajka_skrzdrn.png" alt="Motorkáři pod Strážníkem" class="hero-emblem" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                
             </div>
         </div>
     </section>
@@ -132,9 +126,9 @@
         <div class="container">
             <div class="section-header">
                 <h2>Jezdci a stroje</h2>
-                <p>Kdo kroutí plynem a na čem to drží pohromadě.</p>
+                <p>Kdo kroutí plynem a na čem?</p>
                 <div class="filter-bar">
-                    <button class="filter-btn active" data-filter="all">Všichni</button>
+                    <button class="filter-btn" data-filter="all">Všichni</button>
                     <button class="filter-btn" data-filter="zavodnik">Závodní divize</button>
                     <button class="filter-btn" data-filter="cestovatel">Dálkoví cestovatelé</button>
                 </div>
@@ -144,14 +138,13 @@
                 <!-- Karta 1 -->
                 <article class="card rider-card" data-category="zavodnik">
                     <div class="card-top">
-                        <span class="race-number">#130</span>
-                        <span class="tag tag-race">Závodník & Mechanik</span>
+                        <span class="race-number">#XXX</span>
+                        <span class="tag tag-race">Závodník</span>
                     </div>
-                    <h3>Ondra „SkrzDrn“</h3>
-                    <p class="bike-model"><strong>Jawa 50/23 Mustang</strong> (r. v. 1974) + <strong>Suzuki GSX-R 600 K4</strong></p>
+                    <h3>Miroslav Hejsek</h3>
+                    <p class="bike-model"><strong>Honda 2T 125 ccm</strong> (r. v. 19xx) + <strong>Jawa 50/23 Mustang</strong> (r. v. 1974)</p>
                     <ul class="specs-list">
-                        <li><strong>Kategorie:</strong> Originál / Fichtl 24h</li>
-                        <li><strong>Úpravy:</strong> Vyztužený rám, 24h osvětlení, odladěný karburátor</li>
+                        <li><strong>Kategorie:</strong> Originál / Fichtl 24h + Moto Hoby Junior</li>
                     </ul>
                     <blockquote class="rider-quote">„Když to nejde silou, vezmi větší kladivo nebo stahovací pásku.“</blockquote>
                 </article>
@@ -159,15 +152,13 @@
                 <!-- Karta 2 -->
                 <article class="card rider-card" data-category="zavodnik">
                     <div class="card-top">
-                        <span class="race-number">#21</span>
-                        <span class="tag tag-race">Enduro & Fichtl</span>
+                        <span class="race-number">#69</span>
+                        <span class="tag tag-race">Fichtl</span>
                     </div>
-                    <h3>Mladá krev – Tým B</h3>
-                    <p class="bike-model"><strong>Jawa 50/21 Pionýr</strong> & <strong>Sherco 500 SEF</strong></p>
-                    <ul class="specs-list">
-                        <li><strong>Kategorie:</strong> Cross Country / Vytrvalostní</li>
-                        <li><strong>Úpravy:</strong> Zesílené stupačky, ochrana motoru, ostré obutí</li>
-                    </ul>
+                    <h3>Stanislav Šimůnek</h3>
+                    <p class="bike-model"><strong>Jawa 50/23 Mustang</strong>                    <ul class="specs-list">
+                        <li><strong>Kategorie:</strong> Originál / Fichtl 24h</li>
+                        </ul>
                     <blockquote class="rider-quote">„Brzdy jsou jen pro ty, co nevěří svému andělovi strážnému.“</blockquote>
                 </article>
 
