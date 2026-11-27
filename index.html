@@ -56,8 +56,8 @@
             <div class="hero-logo-box">
                 <img src="img/vlajka_skrzdrn.png" alt="Motorkáři pod Strážníkem" class="hero-emblem" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <div class="logo-fallback" style="display: none; text-align: center;">
-                    <span class="logo-tag" style="font-size: 2rem;">SKRZ <span class="red">DRN</span></span>
-                    <span class="logo-sub">KUNDRATICE</span>
+                    <span class="logo-tag" style="font-size: 2rem; color: #0b0b0c;">SKRZ <span class="red">DRN</span></span>
+                    <span class="logo-sub" style="color: #0b0b0c;">KUNDRATICE</span>
                 </div>
             </div>
         </div>
@@ -274,7 +274,7 @@
             </div>
 
             <!-- OBSAH TABU 2: CESTY -->
-            <div class="tab-content" id="tab-cesty" role="tabpanel" hidden>
+            <div class="tab-content" id="tab-cesty" role="tabpanel">
                 <div class="grid-3">
                     <!-- Trasy GPX -->
                     <div class="card">
@@ -439,38 +439,41 @@
                 <p>Děkujeme všem firmám, dílnám a kamarádům, kteří nás drží ve stopě a pomáhají stavět stroje i pořádat akce.</p>
             </div>
 
-            <div class="grid-3 sponsors-grid">
-                <div class="card sponsor-card">
-                    <span class="card-label">HLAVNÍ PARTNER</span>
-                    <h3>Autodílna &amp; Servis Podkrkonoší</h3>
-                    <p>Podpora závodní techniky, zajištění náhradních dílů, maziv a zázemí pro přípravu strojů na vytrvalostní závody.</p>
+            <div class="partners-grid">
+                <div class="partner-box">
+                    <div>
+                        <span class="card-label">HLAVNÍ PARTNER</span>
+                        <h3>Autodílna &amp; Servis Podkrkonoší</h3>
+                        <p>Podpora závodní techniky, zajištění náhradních dílů, maziv a zázemí pro přípravu strojů.</p>
+                    </div>
                     <span class="sponsor-tag">Technická podpora</span>
                 </div>
 
-                <div class="card sponsor-card">
-                    <span class="card-label">MATERIÁL &amp; DÍLNA</span>
-                    <h3>Kovovýroba a svařování</h3>
-                    <p>Pomoc s výrobou výztuh rámů, stupaček, držáků a zakázkových dílů do garáže pro kategorii Fichtl i Enduro.</p>
+                <div class="partner-box">
+                    <div>
+                        <span class="card-label">MATERIÁL &amp; DÍLNA</span>
+                        <h3>Kovovýroba a svařování</h3>
+                        <p>Pomoc s výrobou výztuh rámů, stupaček, držáků a zakázkových dílů do garáže.</p>
+                    </div>
                     <span class="sponsor-tag">Výroba &amp; Úpravy</span>
                 </div>
 
-                <div class="card sponsor-card">
-                    <span class="card-label">LOKÁLNÍ PODPORA</span>
-                    <h3>Obec Košťálov &amp; Přátelé Kundratic</h3>
-                    <p>Zázemí pro lokální akce, občerstvení v depu a fandění podél tratě od startu až do cíle.</p>
+                <div class="partner-box">
+                    <div>
+                        <span class="card-label">LOKÁLNÍ PODPORA</span>
+                        <h3>Obec Košťálov &amp; Přátelé Kundratic</h3>
+                        <p>Zázemí pro lokální akce, občerstvení v depu a fandění podél tratě od startu až do cíle.</p>
+                    </div>
                     <span class="sponsor-tag">Zázemí &amp; Komunita</span>
                 </div>
             </div>
 
-            <div class="card sponsor-cta mt-2">
-                <div>
-                    <span class="card-label">SPOLUPRÁCE</span>
-                    <h3>Chceš podpořit Motorkáře pod Strážníkem?</h3>
-                    <p>
-                        Rádi umístíme tvé logo na závodní stroje, týmové dresy, stan v depu i sem na web. 
-                        Stačí napsat a domluvíme se u kafe nebo v garáži.
-                    </p>
-                </div>
+            <div class="sponsor-cta">
+                <h3>Chceš podpořit Motorkáře pod Strážníkem?</h3>
+                <p>
+                    Rádi umístíme tvé logo na závodní stroje, týmové dresy, stan v depu i sem na web. 
+                    Stačí napsat a domluvíme se u kafe nebo v garáži.
+                </p>
                 <a href="#kontakt" class="btn btn-primary">Domluvit spolupráci</a>
             </div>
         </div>
@@ -486,7 +489,7 @@
 
             <div class="grid-2">
                 <!-- Kontaktní údaje -->
-                <div class="card contact-info-card">
+                <div class="card">
                     <span class="card-label">ZÁKLADNA PARTY</span>
                     <h3>Motorkáři pod Strážníkem – SKRZ DRN</h3>
                     <p>Domovská garáž v Kundraticích u Košťálova v Podkrkonoší. Vyrážíme odtud na závody po celé republice i na alpské průsmyky.</p>
@@ -553,15 +556,31 @@
     <footer class="footer">
         <div class="container footer-grid">
             <div>
-                <strong>MOTORKÁŘI POD STRÁŽNÍKEM • SKRZ DRN KUNDRATICE</strong>
-                <p>Benzín v krvi, bláto za ušima a parta, na kterou je spoleh.</p>
+                <span class="logo-tag">SKRZ <span class="red">DRN</span></span>
+                <p class="footer-desc">Motorkáři pod Strážníkem – Kundratice. Benzín v krvi, bláto za ušima a parta, na kterou je spoleh.</p>
             </div>
-            <div class="footer-links">
-                <a href="#kalendar">Kalendář</a>
-                <a href="#jezdci">Jezdci</a>
-                <a href="#aktivity">Závody &amp; Cesty</a>
-                <a href="#partneri">Partneři</a>
-                <a href="#kontakt">Kontakt</a>
+            <div>
+                <h4>Rychlá navigace</h4>
+                <ul class="footer-links">
+                    <li><a href="#kalendar">Kalendář sezóny</a></li>
+                    <li><a href="#jezdci">Jezdci &amp; Stroje</a></li>
+                    <li><a href="#aktivity">Závody &amp; Cesty</a></li>
+                    <li><a href="#galerie">Galerie</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Zázemí &amp; Odkazy</h4>
+                <ul class="footer-links">
+                    <li><a href="#oziveni">Depo &amp; Checklist</a></li>
+                    <li><a href="#partneri">Partneři a sponzoři</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                    <li><a href="https://ondra130.rajce.idnes.cz/" target="_blank" rel="noopener">Alba na Rajče.net</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                © 2026 Motorkáři pod Strážníkem – SKRZ DRN Kundratice
             </div>
         </div>
     </footer>
