@@ -153,7 +153,7 @@ function initContactForm() {
         feedback.textContent = 'Připravuji e-mailovou zprávu v tvém poštovním klientovi...';
         feedback.style.color = '#ef4444';
 
-        window.location.href = `mailto:info@skrzdrn.cz?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:ondrej.hejsek@seznam.cz?subject=${subject}&body=${body}`;
     });
 }
 
