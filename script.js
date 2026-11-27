@@ -140,17 +140,26 @@ function initContactForm() {
 
     if (!form || !feedback) return;
 
-    form.addEventListener('submit', (e) => {
+   form.addEventListener('submit', (e) => {
         e.preventDefault();
 
         const name = document.getElementById('contactName').value.trim();
         const email = document.getElementById('contactEmail').value.trim();
         const topicSelect = document.getElementById('contactTopic');
         const topic = topicSelect.options[topicSelect.selectedIndex].text;
-        const message = document.getElementById('contactMessage').value.trim();
+        const message = document.getElementById('contactMessage').value.trim().replace(/\r?\n/g, '\r\n');
 
         const subject = encodeURIComponent(`[SKRZ DRN Web] ${topic} – ${name}`);
-        const body = encodeURIComponent(`Jméno: ${name}\nE-mail: ${email}\nTéma: ${topic}\n\nZpráva:\n${message}`);
+        const rawBody = [
+            `Jméno: ${name}`,
+            `E-mail: ${email}`,
+            `Téma: ${topic}`,
+            ``,
+            `Zpráva:`,
+            `${message}`
+        ].join('\r\n');
+
+        const body = encodeURIComponent(rawBody);
 
         feedback.textContent = 'Připravuji e-mailovou zprávu v tvém poštovním klientovi...';
         feedback.style.color = '#ef4444';
