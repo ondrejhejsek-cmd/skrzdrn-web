@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorkáři pod Strážníkem | SKRZ DRN Kundratice</title>
+    <meta name="description" content="Oficiální web party Motorkáři pod Strážníkem – SKRZ DRN Kundratice. Závody Fichtlů, enduro, daleké výlety, garáž a příběhy z depa.">
+    <link rel="icon" type="image/png" href="img/logo-straznik.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigace -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="img/logo_skrzdrn.png" alt="SKRZ DRN" class="nav-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="logo-fallback" style="display: none;">
+                    <span class="logo-tag">SKRZ <span class="red">DRN</span></span>
+                    <span class="logo-sub">MOTORKÁŘI POD STRÁŽNÍKEM</span>
+                </div>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Otevřít menu">☰</button>
+            <nav class="nav-links" id="navLinks">
+                <a href="#kalendar">Kalendář</a>
+                <a href="#jezdci">Jezdci & Stroje</a>
+                <a href="#aktivity">Závody & Cesty</a>
+                <a href="#galerie">Galerie</a>
+                <a href="#oziveni">Depo & Checklist</a>
+                <a href="#partneri">Partneři</a>
+                <a href="#kontakt" class="btn-nav">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Úvodní sekce (Hero) s hlavním logem Motorkáři pod Strážníkem -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="badge">• KUNDRATICE • PODKRKONOŠÍ •</span>
+                <h1>MOTORKÁŘI POD STRÁŽNÍKEM<br><span class="accent">SKRZ DRN KUNDRATICE</span></h1>
+                <p class="hero-lead">
+                    Jedna parta, dvě vášně. Zatímco jedni hltají tisíce kilometrů nejen po Evropě na cestovních endurech, 
+                    mladí kluci ždímají dvoutakty různých kubatur na doraz na 24hodinovkách a motokrosových tratích.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#aktivity" class="btn btn-primary" onclick="switchTab('zavody')">Závodní sekce</a>
+                    <a href="#aktivity" class="btn btn-secondary" onclick="switchTab('cesty')">Cestovatelé & Trasy</a>
+                </div>
+            </div>
+
+            <!-- Hlavní logo z PDF (strana 2) -->
+            <div class="hero-logo-box">
+                <img src="img/vlajka_skrzdrn.png" alt="Motorkáři pod Strážníkem" class="hero-emblem" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. SPOLEČNÝ ZÁKLAD: Kalendář sezóny -->
+    <section id="kalendar" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kalendář sezóny</h2>
+                <p>Kde nás letos potkáte na trati, v depu nebo u ohně.</p>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="race-table">
+                    <thead>
+                        <tr>
+                            <th>Datum</th>
+                            <th>Akce / Závod</th>
+                            <th>Místo</th>
+                            <th>Divize</th>
+                            <th>Stav / Odkaz</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>16. 5. 2026</strong></td>
+                            <td>Jarní otevření sezóny & vyjížďka</td>
+                            <td>Kundratice – Pod Strážníkem</td>
+                            <td><span class="tag tag-trip">Výlet</span></td>
+                            <td><a href="#galerie" class="table-link">Fotky z akce →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>20. 6. 2026</strong></td>
+                            <td>Fichtl MAZEC – 24h vytrvalostní závod</td>
+                            <td>Podkrkonoší</td>
+                            <td><span class="tag tag-race">Závody</span></td>
+                            <td><a href="#aktivity" class="table-link">Report z depa →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>18. 7. 2026</strong></td>
+                            <td>Alpský okruh & Grossglockner</td>
+                            <td>Rakousko / Itálie</td>
+                            <td><span class="tag tag-trip">Cestopis</span></td>
+                            <td><a href="#aktivity" class="table-link">GPX trasa →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>6. 9. 2026</strong></td>
+                            <td>Enduro Cross Country (ECC)</td>
+                            <td>Bystrá nad Jizerou</td>
+                            <td><span class="tag tag-race">Závody</span></td>
+                            <td><a href="https://ondra130.rajce.idnes.cz/" target="_blank" rel="noopener" class="table-link">Galerie Rajče →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>19. 9. 2026</strong></td>
+                            <td>Enduro Cross Country (ECC)</td>
+                            <td>Vysoké nad Jizerou</td>
+                            <td><span class="tag tag-race">Závody</span></td>
+                            <td><a href="https://ondra130.rajce.idnes.cz/" target="_blank" rel="noopener" class="table-link">Galerie Rajče →</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. SPOLEČNÝ ZÁKLAD: Profily jezdců a strojů -->
+    <section id="jezdci" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Jezdci a stroje</h2>
+                <p>Kdo kroutí plynem a na čem?</p>
+                <div class="filter-bar">
+                    <button class="filter-btn" data-filter="all">Všichni</button>
+                    <button class="filter-btn" data-filter="zavodnik">Závodní divize</button>
+                    <button class="filter-btn" data-filter="cestovatel">Dálkoví cestovatelé</button>
+                </div>
+            </div>
+
+            <div class="grid-3" id="ridersGrid">
+                <!-- Karta 1 -->
+                <article class="card rider-card" data-category="zavodnik">
+                    <div class="card-top">
+                        <span class="race-number">#XXX</span>
+                        <span class="tag tag-race">Závodník</span>
+                    </div>
+                    <h3>Miroslav Hejsek</h3>
+                    <p class="bike-model"><strong>Honda 2T 125 ccm</strong> (r. v. 19xx) + <strong>Jawa 50/23 Mustang</strong> (r. v. 1974)</p>
+                    <ul class="specs-list">
+                        <li><strong>Kategorie:</strong> Originál / Fichtl 24h + Moto Hoby Junior</li>
+                    </ul>
+                    <blockquote class="rider-quote">„Když to nejde silou, vezmi větší kladivo nebo stahovací pásku.“</blockquote>
+                </article>
+
+                <!-- Karta 2 -->
+                <article class="card rider-card" data-category="zavodnik">
+                    <div class="card-top">
+                        <span class="race-number">#69</span>
+                        <span class="tag tag-race">Fichtl</span>
+                    </div>
+                    <h3>Stanislav Šimůnek</h3>
+                    <p class="bike-model"><strong>Jawa 50/23 Mustang</strong>                    <ul class="specs-list">
+                        <li><strong>Kategorie:</strong> Originál / Fichtl 24h</li>
+                        </ul>
+                    <blockquote class="rider-quote">„Brzdy jsou jen pro ty, co nevěří svému andělovi strážnému.“</blockquote>
+                </article>
+
+                <!-- Karta 3 -->
+                <article class="card rider-card" data-category="cestovatel">
+                    <div class="card-top">
+                        <span class="race-number">ADV</span>
+                        <span class="tag tag-trip">Dálkový jezdec</span>
+                    </div>
+                    <h3>Cestovatelská sekce</h3>
+                    <p class="bike-model"><strong>Cestovní endura & Naháče</strong> (750–1250 ccm)</p>
+                    <ul class="specs-list">
+                        <li><strong>Revír:</strong> Alpy, Balkán, Karpaty a okresky Podkrkonoší</li>
+                        <li><strong>Výbava:</strong> Hliníkové kufry, navigace a zásoba kafe do moka konvičky</li>
+                    </ul>
+                    <blockquote class="rider-quote">„Cíl není důležitý, hlavní je nejet po dálnici a najít dobrou hospodu.“</blockquote>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. & 3. PŘEPÍNACÍ SEKCE: Závodní tým VS Cestovatelé -->
+    <section id="aktivity" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header-flex">
+                    <div>
+                        <h2>Živý obsah ze sezóny</h2>
+                        <p>Vyber si, jestli tě víc zajímá vůně spáleného dvoutaktu v depu, nebo plánování tras.</p>
+                    </div>
+                    <!-- Oválné závodní logo z PDF (strana 3) -->
+                    <img src="img/logo-oval.png" alt="SKRZ DRN Závodní divize" class="section-badge-logo" onerror="this.style.display='none';">
+                </div>
+                
+                <div class="tabs-nav">
+                    <button class="tab-btn active" id="tab-btn-zavody" onclick="switchTab('zavody')">🔧 Závodní tým (Depo & Garáž)</button>
+                    <button class="tab-btn" id="tab-btn-cesty" onclick="switchTab('cesty')">🗺️ Parta na cestách (Trasy & Okruhy)</button>
+                </div>
+            </div>
+
+            <!-- OBSAH TABU 1: ZÁVODY -->
+            <div class="tab-content active" id="tab-zavody">
+                <div class="grid-2">
+                    <!-- Z deníku depa -->
+                    <div class="card">
+                        <span class="card-label">Z DENÍKU DEPA</span>
+                        <h3>Fichtl MAZEC 24h: Jak jsme ve 3 ráno vařili stupačku</h3>
+                        <p class="meta">Publikováno po závodním víkendu • Kategorie Originál</p>
+                        <p>
+                            Start se povedl na jedničku, prvních šest hodin Mustang šlapal jako hodinky. 
+                            Kolem půlnoci ale přišla průtrž mračen a ve tři ráno praskl držák stupačky. 
+                            V depu nastoupila svářečka, rychlá výměna svíčky a jelo se dál až pod šachovnicový prapor.
+                        </p>
+                        <div class="stat-row">
+                            <div><strong>24 hod</strong><span>V kuse na trati</span></div>
+                            <div><strong>18 min</strong><span>Čas v depu celkem</span></div>
+                            <div><strong>100 %</strong><span>Nasazení</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Garáž a stavba strojů -->
+                    <div class="card">
+                        <span class="card-label">GARÁŽ & STAVBA STROJŮ</span>
+                        <h3>Zimní příprava Mustanga 50/23 do kategorie Originál</h3>
+                        <p class="meta">Technický koutek • Motor & Podvozek</p>
+                        <p>
+                            Pravidla kategorie Originál jsou neúprosná: maximální vrtání 40 mm, sériové časování kanálů, 
+                            originální karburátor i výfuk. O to víc rozhoduje precizní slícování, spolehlivé zapalování, 
+                            kvalitní ložiska na klice a vyztužení kyvné vidlice i krku řízení.
+                        </p>
+                        <ul class="specs-list">
+                            <li>✔ Kontrola vůlí a repas předních teleskopů</li>
+                            <li>✔ Přepracovaná kabeláž pro přídavná noční světla</li>
+                            <li>✔ Nová rozeta a sekundární řetěz ČZ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Výsledková listina -->
+                <div class="card mt-2">
+                    <span class="card-label">VÝSLEDKOVÁ LISTINA & STATISTIKY</span>
+                    <h3>Přehled výsledků týmu</h3>
+                    <div class="table-wrapper">
+                        <table class="race-table compact">
+                            <thead>
+                                <tr>
+                                    <th>Závod</th>
+                                    <th>Jezdec / Posádka</th>
+                                    <th>Stroj</th>
+                                    <th>Umístění</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Fichtl MAZEC 24h</td>
+                                    <td>SkrzDrn Racing Team</td>
+                                    <td>Jawa 50/23 Mustang</td>
+                                    <td><strong>Dojeto v cíli (bez ztráty kytičky)</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Pohár Podkrkonoší</td>
+                                    <td>SkrzDrn Junior</td>
+                                    <td>Jawa 50/21 Pionýr</td>
+                                    <td><strong>TOP 10 ve třídě</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OBSAH TABU 2: CESTY -->
+            <div class="tab-content" id="tab-cesty">
+                <div class="grid-3">
+                    <!-- Trasy GPX -->
+                    <div class="card">
+                        <span class="card-label">TRASY & TIPY (GPX)</span>
+                        <h3>Krkonošský & Jizerský okruh (185 km)</h3>
+                        <p class="meta">Asfalt • Zatáčkovité okresky • Minimální provoz</p>
+                        <p>
+                            Start v Kundraticích, přes Semily, Vysoké nad Jizerou, Souš, Smědavu a zpět přes Ještědský hřeben. 
+                            Ideální půldenní vyjížďka s parádním povrchem.
+                        </p>
+                        <p class="tip-box"><strong>Tip na jídlo:</strong> Kiosk na Smědavě nebo hospůdka v Podkrkonoší.</p>
+                        <a href="#" class="btn btn-outline btn-sm" onclick="alert('Nahraj svůj soubor trasa-krkonose.gpx do složky /gpx na GitHubu a propoj tento odkaz!'); return false;">⬇ Stáhnout trasu (.GPX)</a>
+                    </div>
+
+                    <!-- Hodnocení okruhů očima diváka -->
+                    <div class="card">
+                        <span class="card-label">OČIMA DIVÁKA</span>
+                        <h3>Motokrosový areál Štikovská rokle (Nová Paka)</h3>
+                        <p class="meta">Hodnocení trati a zázemí • ★★★★★</p>
+                        <ul class="specs-list">
+                            <li><strong>Parkování:</strong> Dostatek místa pro motorky i dodávky hned u areálu.</li>
+                            <li><strong>Výhled na trať:</strong> Přírodní amfiteátr – vidíš téměř celý okruh z jednoho místa.</li>
+                            <li><strong>Zázemí:</strong> Klasické klobásy, pivo i místo na postavení stanu.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cestopisy -->
+                    <div class="card">
+                        <span class="card-label">CESTOPIS & DENÍK Z CEST</span>
+                        <h3>4 dny v sedle: Cesta na jih a zpět</h3>
+                        <p class="meta">1 650 km • 4 motorky • 1 prasklé lanko</p>
+                        <p>
+                            Vyrazili jsme v pátek za rozbřesku. První den déšť u Budějovic, druhý den nekonečné serpentiny 
+                            a spaní pod širákem. Cestou zpět jsme řešili povolený řetěz na benzínce, ale domů jsme dorazili všichni po ose.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. SPOLEČNÝ ZÁKLAD: Fotogalerie a videa -->
+    <section id="galerie" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fotogalerie a videa</h2>
+                <p>Výběr nejlepších momentek z tratě, depa i večerního posezení. Kompletní alba najdeš na Rajčeti.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="gallery-card">
+                    <div class="gallery-thumb" style="background: linear-gradient(135deg, #4a080c, #0f0f11);">
+                        <span>📸 ZÁVODY & ENDURO</span>
+                    </div>
+                    <div class="gallery-body">
+                        <h3>ECC Bystrá & Vysoké nad Jizerou</h3>
+                        <p>Bláto, skoky, souboje v zatáčkách a momentky z depa.</p>
+                        <a href="https://ondra130.rajce.idnes.cz/" target="_blank" rel="noopener" class="table-link">Otevřít celé album na Rajče.net →</a>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-thumb" style="background: linear-gradient(135deg, #27272a, #09090b);">
+                        <span>🔧 GARÁŽ & STAVBA</span>
+                    </div>
+                    <div class="gallery-body">
+                        <h3>Zimní příprava Fichtlů</h3>
+                        <p>Rozborky motorů, svařování výztuh a ladění na ponku.</p>
+                        <a href="https://ondra130.rajce.idnes.cz/" target="_blank" rel="noopener" class="table-link">Otevřít celé album na Rajče.net →</a>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-thumb" style="background: linear-gradient(135deg, #7f1d1d, #111113);">
+                        <span>🏍️ VYJÍŽĎKY PARTA</span>
+                    </div>
+                    <div class="gallery-body">
+                        <h3>Vyjížďky pod Strážníkem</h3>
+                        <p>Společné kilometry, zastávky na vyhlídkách a večerní oheň.</p>
+                        <a href="https://ondra130.rajce.idnes.cz/" target="_blank" rel="noopener" class="table-link">Otevřít celé album na Rajče.net →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. NÁPADY NA OŽIVENÍ: Hlášky, Smolař sezóny, Závodní checklist -->
+    <section id="oziveni" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ze života v depu</h2>
+                <p>Tohle k motorkám patří stejně jako benzín a olej.</p>
+            </div>
+
+            <div class="grid-2">
+                <!-- Levý sloupec: Hlášky + Smolař sezóny -->
+                <div class="stack">
+                    <div class="card">
+                        <span class="card-label">HLÁŠKY Z DEPA A Z CEST</span>
+                        <h3>Moudra od ohně i z nočního servisu</h3>
+                        <blockquote class="quote-box" id="quoteDisplay">
+                            „To nemá vůli, to je tepelná dilatace pro vysoké otáčky!“
+                        </blockquote>
+                        <button class="btn btn-secondary btn-sm" onclick="nextQuote()">🎲 Další hláška z depa</button>
+                    </div>
+
+                    <div class="card trophy-card">
+                        <span class="card-label">SÍŇ SLÁVY • SMOLAŘ SEZÓNY</span>
+                        <h3>🏆 Zlatá stahovací páska roku</h3>
+                        <p>
+                            <strong>Ocenění za nejkreativnější polní opravu:</strong> Připevnění uvolněného výfuku a zadního blatníku 
+                            pomocí šesti stahovacích pásek a kusu vázacího drátu pět minut před startem rozjížďky. Drželo to až do cíle!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pravý sloupec: Závodní checklist -->
+                <div class="card checklist-card" id="printableChecklist">
+                    <div class="checklist-header">
+                        <div>
+                            <span class="card-label">TAHÁK DO GARÁŽE</span>
+                            <h3>Závodní checklist na víkend</h3>
+                        </div>
+                        <button class="btn btn-outline btn-sm no-print" onclick="window.print()">🖨️ Vytisknout / PDF</button>
+                    </div>
+                    <p class="meta">Odškrtej si výbavu před odjezdem (stav se ukládá v prohlížeči):</p>
+                    
+                    <div class="checklist-group">
+                        <h4>Stroj a náhradní díly</h4>
+                        <label><input type="checkbox" data-item="svicky"> Náhradní svíčky (min. 3 ks) + klíč na svíčky</label>
+                        <label><input type="checkbox" data-item="lanka"> Náhradní lanko plynu a spojky + čokoládky</label>
+                        <label><input type="checkbox" data-item="duse"> Náhradní duše, montpáky a pumpička</label>
+                        <label><input type="checkbox" data-item="retez"> Spojka řetězu, olej do benzínu (2T) a kanystr</label>
+                    </div>
+
+                    <div class="checklist-group">
+                        <h4>Nářadí a depo</h4>
+                        <label><input type="checkbox" data-item="gola"> Gola sada, klíče 8–
