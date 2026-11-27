@@ -867,4 +867,51 @@ h1, h2, h3, h4, .logo-tag {
     .no-print {
         display: none !important;
     }
+    /* === VYSKAKOVACÍ OKNO: WEB VE VÝVOJI === */
+.dev-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(7, 7, 8, 0.92);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+}
+
+.dev-modal-overlay.hidden {
+    display: none;
+}
+
+.dev-modal-box {
+    background: var(--bg-card);
+    border: 2px solid var(--red);
+    border-radius: 14px;
+    max-width: 520px;
+    width: 100%;
+    padding: 2.2rem 1.8rem;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+}
+
+.dev-modal-box h2 {
+    font-size: 1.85rem;
+    color: var(--white);
+    margin-bottom: 0.9rem;
+}
+
+.dev-modal-box p {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    margin-bottom: 1.8rem;
+    line-height: 1.6;
+}
+
+.dev-modal-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.9rem;
+}
 }
