@@ -168,47 +168,12 @@ function initContactForm() {
     });
 }
 
-// 7. VYSKAKOVACÍ OKNO: WEB VE VÝVOJI
-function initDevModal() {
-    const modal = document.getElementById('devModal');
-    const enterBtn = document.getElementById('devEnterBtn');
-    const backBtn = document.getElementById('devBackBtn');
-
-    if (!modal || !enterBtn || !backBtn) return;
-
-    // Pokud už návštěvník v této relaci prohlížeče odklikl vstup, okno znovu nezobrazovat
-    if (sessionStorage.getItem('skrzdrn_dev_accepted') === 'true') {
-        modal.classList.add('hidden');
-        return;
-    }
-
-    // Zablokuje scrollování stránky na pozadí, dokud se uživatel nerozhodne
-    document.body.style.overflow = 'hidden';
-
-    // Tlačítko 1: Pustí na web
-    enterBtn.addEventListener('click', () => {
-        sessionStorage.setItem('skrzdrn_dev_accepted', 'true');
-        modal.classList.add('hidden');
-        document.body.style.overflow = '';
-    });
-
-    // Tlačítko 2: Vrátí zpět (pokud není historie, přejde na Seznam.cz)
-    backBtn.addEventListener('click', () => {
-        if (window.history.length > 1) {
-            window.history.back();
-        } else {
-            window.location.href = 'https://www.seznam.cz';
-        }
-    });
-}
-
 // INICIALIZACE PO NAČTENÍ STRÁNKY
 document.addEventListener('DOMContentLoaded', () => {
     initRiderFilter();
     initChecklist();
     initMobileMenu();
     initContactForm();
-    initDevModal(); // <-- TADY JE SPUŠTĚNÍ VYSKAKOVACÍHO OKNA
 
     // Napojení tlačítek tabů přes data-tab atribut
     document.querySelectorAll('.tab-btn[data-tab]').forEach(btn => {
